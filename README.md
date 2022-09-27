@@ -1,7 +1,7 @@
 # pi2_experiencein
 Projeto didático desenvolvido na matéria de Programação para Internet.
 ## 💻 Tecnologias
-As tecnologias utilizados foram python 3.6 & django 2.2.
+As tecnologias utilizados são python 3.6 & django 2.2.
 ## 🚀 Rodando o Projeto
 Prepare o banco de dados SQLite, que já vem com o Django:
 ```
