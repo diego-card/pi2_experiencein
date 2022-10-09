@@ -1,3 +1,5 @@
 *.pyc
 __pycache__/
+virtualenv
+instrucao.txt
 https://github.com/iuricode/readme-template/blob/main/repository/repository.md
