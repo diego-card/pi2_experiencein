@@ -8,12 +8,14 @@ from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth.decorators import permission_required
+from django.http import HttpResponseForbidden
 
 @login_required
 def index(request):
     print(request.user.username) #novo
     print(request.user.email) #novo
-    print(request.user.has_perm('perfis.add_convite')) #novo
+    if not request.user.has_perm('perfis.add_convite'):
+        return HttpResponseForbidden('Acesso negado')
 
     return render(request, 'index.html', {'perfis' : Perfil.objects.all() , 'perfil_logado' : get_perfil_logado(request)})
 
