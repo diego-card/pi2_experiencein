@@ -25,8 +25,6 @@ SECRET_KEY = '0+dj%9(n^4dliytdrf$j!r4c1q9!fv8&n2t1=$nx5=^9)5m%%h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -41,6 +39,7 @@ INSTALLED_APPS = [
     'usuarios',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -51,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'experiencein.urls'
@@ -137,3 +137,10 @@ LOGIN_URL="/login/"
 LOGOUT_URL="/logout/"
 LOGIN_REDIRECT_URL="/"
 LOGOUT_REDIRECT_URL=LOGIN_URL
+
+ALLOWED_HOSTS = ['localhost']
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000',
+)
