@@ -23,10 +23,7 @@ python manage.py runserver
 ```
 Acesse-o localmente através da URL:
 localhost:8000
-# Funcionamento
-Para ver como fica o projeto acesse o link:
 
-diegocard.pythonanywhere.com
 ## 🤝 Colaboradores
 Dr. Fábio Henrique
 ## 🖊️ Autor
